@@ -7,7 +7,6 @@ from models.user import User
 from models.list import List
 import database.db_config as _config
 
-
 def user(name : str, email : str, password:str):
     db = _config.SessionLocal()
     try:
