@@ -14,7 +14,7 @@ def user(name : str, email : str, password:str):
         user = db.query(User).filter(User.email == email).first()
         if user:
             raise _fastapi.HTTPException(status_code=422, detail="Email is already registered with us.")
-        # Create a new user 
+        
         new_user = User(
             UID = _hash.getSHA1(f"{_datetime.datetime.now}{email}"),
             name = name,
