@@ -1,7 +1,4 @@
-import database.db_config as _config
 import fastapi as _fastapi
-import sqlalchemy.orm as _orm
-import sqlalchemy as _sql
 import fastapi as _fastapi
 import hash as _hash
 import datetime as _datetime
