@@ -41,5 +41,15 @@ async def delete_task(TID : str):
     return delete.task(TID)
 
 
+@app.put("/task/update/", response_model=dict)
+async def update_task(
+    UID: str = _fastapi.Form(...),
+    name : str = _fastapi.Form(...),
+    description : str = _fastapi.Form(...),
+    due : str = _fastapi.Form(...),
+):
+    return update.task(UID=UID, name=name, description=description, due=due)
+
+
 
 
