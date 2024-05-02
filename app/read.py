@@ -4,6 +4,7 @@ from models.user import User
 from models.list import List
 import sqlalchemy as _sql
 
+import database.db_config as _config
 
 def UID(email : str):
     try:
@@ -21,6 +22,13 @@ def UID(email : str):
         return {"response" : f"{error}"}
     finally:
         db.close()
+
+def user(email : str):
+    user = _config.SessionLocal().query(User).filter(User.email == email).first()
+    if not user:
+        raise _fastapi.HTTPException(status_code=404, detail="USer not found")
+    
+    return user
 
 def alltask(UID : str):
     
