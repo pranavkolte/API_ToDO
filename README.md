@@ -18,6 +18,7 @@ open terminal run ```docker contanier ls```
 ![alt text](image-14.png)
 
 run ```docker inspect <sql_image_name>```
+
 ![alt text](image-15.png)
 
 copy IP address 
