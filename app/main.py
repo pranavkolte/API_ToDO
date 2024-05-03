@@ -40,7 +40,7 @@ def login(form_data : _security.OAuth2PasswordRequestForm = _fastapi.Depends()):
  
 
 @app.get("/UID/{email}")
-async def get_UID(email : str ):
+async def get_UID(email : str, token : str = _fastapi.Depends(auth.oauth2_scheme) ):
     return read.UID(email=email)
 
 @app.post("/task/create", response_model= dict)

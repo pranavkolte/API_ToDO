@@ -7,7 +7,7 @@ from models.list import List
 def task(UID, name, description, due):
     db = _config.SessionLocal()
     try:
-        # TODO elimnate duplication
+        
         task_id =  _hash.get_SHA1_limit(f"{name}{UID}")
         list = db.query(List).filter(List.TID == task_id).first()
         if  list:

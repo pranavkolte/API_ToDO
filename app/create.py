@@ -34,12 +34,10 @@ def user(name : str, email : str, password:str):
 def task(UID, name, description, due):
     db = _config.SessionLocal()
     try:
-        # TODO elimnate duplication
         task_id =  _hash.get_SHA1_limit(f"{name}{UID}")
-        list = db.query(List).filter(List.name == name).first()
+        list = db.query(List).filter(List.TID == task_id).first()
         if list:
-            if list.TID == task_id:
-                raise _fastapi.HTTPException(status_code=422, detail="Task is already exist")
+            raise _fastapi.HTTPException(status_code=422, detail="Task is already exist")
         
         new_task = List(
             TID =task_id,
