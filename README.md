@@ -22,10 +22,12 @@ run ```docker inspect <sql_image_name>```
 ![alt text](image-15.png)
 
 copy IP address 
+
 ![alt text](image-16.png)
 
 got to app/database/db_config
 replace host with current IP
+
 ![alt text](image-17.png)
 
 You are good to go 
