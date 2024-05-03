@@ -2,6 +2,33 @@
 
 Documentation link :https://paper-father-7d5.notion.site/To-Do-API-91026a7e662a4ec79d92fcab92600a3a
 
+## create new database 
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+
+## import database 
+![alt text](image-12.png)
+![alt text](image-13.png)
+
+
+Make sure your docker engine is turned on
+run ```docker-compose up --build```
+open terminal run ```docker contanier ls```
+![alt text](image-14.png)
+
+run ```docker inspect <sql_image_name>```
+![alt text](image-15.png)
+
+copy IP address 
+![alt text](image-16.png)
+
+got to app/database/db_config
+replace host with current IP
+![alt text](image-17.png)
+
+You are good to go 
+
 ## Bearer token
 ![alt text](image-8.png)
 
