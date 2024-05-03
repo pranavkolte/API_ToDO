@@ -7,7 +7,6 @@ Documentation link :https://paper-father-7d5.notion.site/To-Do-API-91026a7e662a4
 ## create new database 
 ![alt text](image-9.png)
 ![alt text](image-10.png)
-![alt text](image-11.png)
 
 ## import database 
 ![alt text](image-12.png)
