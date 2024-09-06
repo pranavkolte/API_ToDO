@@ -2,7 +2,6 @@ import fastapi as _fastapi
 import database.db_config as config
 from models.user import User
 from models.list import List
-import sqlalchemy as _sql
 
 import database.db_config as _config
 
